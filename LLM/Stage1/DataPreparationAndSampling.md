@@ -110,5 +110,6 @@
 
 ## 14. Byte Pair Encoding
 
-- BPE to handle the unknown words in the LLM Models.
+- BPE to handle the unknown words in the GPT LLM Models.
 - Here the words itself divided into sub words that will be consider as a token.
+- This automatically handles the unknown words
