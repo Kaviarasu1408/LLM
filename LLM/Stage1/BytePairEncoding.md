@@ -53,3 +53,8 @@ The subword splitting helps the model learn the different words with the same ro
 ![alt text](../Images/finalOutput.png)
 
 - The above list of 11 tokens will serve as a vocabulary.
+
+## 6. BPE Code
+
+- We can use tiktoken and to use it for Encoding and decoding.
+- Encoder will expect the input as a text where as decoder will expect token Id as an input.
