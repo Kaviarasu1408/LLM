@@ -2,11 +2,11 @@
 
 ## 1. What are tokens Embedding and Why tokens embedding needed.
 
-- Cat and Kitten are semantically related, Assigning a random doesn't capture the relationship bt these words..
+- Cat and Kitten are semantically related, Assigning a random number doesn't capture the relationship bt these words..
 - we need to exploit the information like cat and kittens are related to each other.
 
 - Then comes the vector.
-- we can ask certain questions to the words..
+- we can ask certain questions to the words..assign value high or low.
 - If the value is high for certain question for those words..those are realteable..
 - for e.g below for apple and banana is_editable value is high..so they kind of related...
 - vecotrs can capture the semantic meaning, the values are close to each other..
@@ -45,17 +45,19 @@
 
 ## 6. Embedding Layer weight matrix.
 
-- for constructing embedding layer weight matrix we need to have the token Id and the vocabulary size..
+- For constructing embedding layer weight matrix we need to have the token Id and the vocabulary size and the vector.
 - we already have the token Id but we don't know the weight.
-- for to calculate the weight, intialize the embedding weights with random values.This is ths starting part of the learning..
-- but this weight will be optimized as part of LLM training process.
-- Eac vocabulary have vector dimesnions as certain number of vector dimensions and we need to construct it.
+- For to calculate the weight, intialize the embedding weights with random values.This is ths starting part of the learning..
+- But this weight will be optimized as part of LLM training process.
+- Each vocabulary have vector dimesnions as certain number of vector dimensions and we need to construct it.
+- If you want to restrivee the vector dimensions based on the token id we can retrive.
 
-![alt text](../Images/embeddingLayerMatrix.png)
+    ![alt text](../Images/embeddingLayerMatrix.png)
 
+- Suppose we have the following four input examples with input ids 2, 3, 5, and 1 (after tokenization).
 - torch.nn.embedding will add a radom weight based on the vocab_size and dimensions..
-- since the vocab size is 6 and the dimensions is 3 so we have 6 * 3.
-- every vocab have 3 vector dimensions.
+- since the vocab size is 6 and the dimensions is 3 so we have 6 * 3.It will have 6 rows and 3 columns.
+- Random values will be added for rows and columns.
 - These the random weight but these are the values optimized in the LLM trainings as part of LLM.
 - Basically its a lookup table, based on the token Id it will retrive that particular row vector representation.
 
