@@ -41,6 +41,7 @@
 
 - But we need to look more efficient way to achieve this.
 - So, instead of zeroing out attention weights above the diagonal and renormalizing the results, we can mask the unnormalized attention scores above the diagonal with negative infinity before they enter the softmax function:
+- after calculating the attention score, we can mask diagonally and we can normalize it using softmax fuction.
 
     ![alt text](../Images/maskWithInfinity.png)
 
@@ -58,3 +59,19 @@
 - The scaling is calculated by the formula 1 / (1 - dropout_rate)
 
     ![alt text](../Images/dropoutexamplecode.png)
+
+## Self Attention with Causual Attention together
+
+- First we have a vector dimensinal for a word..
+- Now we need to calculate the query,key and value for it.To do again we can use linear to construct a random weight for query,key and value.
+- we can multiply the vector dimesnios with each Wquery,Wkey and Wvalue to get the three dimensional weight.
+- For calculating the attention score we need to multiply the query and key to get the attention score.
+- Now we need to mask diagonally, the diagonally above we convert it as negative infinity.
+- Now if you do normalize using softmax function, negative infinity will be considerrd as 0 and all the values will be sum upto 1.
+- Now use dropout,we can dropout percentage 50%, if 50% of the neurons will be turned off..
+- After that once you have attention weight..
+- we can calculate context vector using attention weight and value matrix.
+
+    ![alt text](../Images/selfCausalAttention.png)
+
+    ![alt text](../Images/causualAttentionoutputt.png)
