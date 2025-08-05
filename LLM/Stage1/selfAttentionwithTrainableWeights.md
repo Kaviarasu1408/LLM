@@ -10,7 +10,10 @@
 
     ![alt text](../Images/selfAttentionTrainable.png)
 
-- Input is a tensor with the vector embedding.,
+- Input is a tensor with the vector embedding.
+- Usually input and output dimensions are same, but we for sake of this training..we can give the d_in and d_out which is 3 and 2.
+- Now we need to compute the query,key and value.
+
 
     ![alt text](../Images/keyqueryValue.png)
 
@@ -22,7 +25,7 @@
  - lets say we have a word "your jounrnery starts with life"
  - for this vector embedding we have query,key and value..
  - now we need to consider "Journey", we take query(2) which is journey calculate the attention score with each words.
- - query(2) and key(1), query(2) and key(2), query(2) and key(3), this how we calculate the attention score for each.
+ - query(2) and key(1), query(2) and key(2), query(2) and key(3) and son on this how we calculate the attention score for each.
 
     ![alt text](../Images/queriesKeys.png)
 
@@ -35,16 +38,21 @@
 
 - they are not sum up to the 1, these looks like random values..we need to normalization..we can make interpretable..when the queries is journey we can say give 20% attention or 30% attention this one..
  - it helps in backpropagation..
+ - for this we need to do softmax.
 
 
 ## 3. Attention weights..
 
 - we need to do normalization to sum up to 1.
+- And we need to scale the attention scores by dividing them by the square root of the embedding dimension(d_k)
+- we can use softmax to normalize.
 
+    ![alt text](../Images/normAttentionweight.png)
 
 ## 4. Context Vector.
 
-- Multiply the value of the particular vector to the attention score of the particular value..
-- then sum up everything...
+- Multiply the  attention weight with values(pv) and then sum up everything...
 
     ![alt text](../Images/selfAttentionContextVec.png)
+
+    ![alt text](../Images/contextVecotorForTrainableWeights.png)
