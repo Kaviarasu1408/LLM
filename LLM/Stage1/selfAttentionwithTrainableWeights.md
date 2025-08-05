@@ -56,3 +56,9 @@
     ![alt text](../Images/selfAttentionContextVec.png)
 
     ![alt text](../Images/contextVecotorForTrainableWeights.png)
+
+## we can use linear instead of nn.
+
+- basically it will give efficient weights in the model to train.
+
+    ![alt text](../Images/linearSelfAttention.png)
