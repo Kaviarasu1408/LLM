@@ -62,15 +62,16 @@
 
 ## Self Attention with Causual Attention together
 
-- First we have a vector dimensinal for a word..
-- Now we need to calculate the query,key and value for it.To do again we can use linear to construct a random weight for query,key and value.
-- we can multiply the vector dimesnios with each Wquery,Wkey and Wvalue to get the three dimensional weight.
-- For calculating the attention score we need to multiply the query and key to get the attention score.
-- Now we need to mask diagonally, the diagonally above we convert it as negative infinity.
+- First we have a vector dimensinal embeddings for our word..
+- Now we need to calculate the query,key and value for it.To do again we can use linear to construct a random weight matrix for query,key and value.
+- we can multiply the vector dimesnionss with the trianable weights each Wquery,Wkey and Wvalue to get the query,key and value.
+- Now For calculating the attention score we need to multiply the query and key Transpose to get the attention score.
+- Now we need mask out the future words so for that we need to mask diagonally, the diagonally above we can convert it as negative infinity.
 - Now if you do normalize using softmax function, negative infinity will be considerrd as 0 and all the values will be sum upto 1.
 - Now use dropout,we can dropout percentage 50%, if 50% of the neurons will be turned off..
 - After that once you have attention weight..
-- we can calculate context vector using attention weight and value matrix.
+- we can calculate context vector using attention weight and value matrix.we can multiply it and finally we got the value.
+- we can process batches..
 
     ![alt text](../Images/selfCausalAttention.png)
 
