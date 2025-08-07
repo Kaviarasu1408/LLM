@@ -33,7 +33,7 @@
 ## Feed Forward Architecture.
 
 - feed formal neural network is a small neural network consists of 2 linear layers and gelu activiation function.
-- In the first linear layer 1 if we do expanison, we will project the input into 4 times larger dimension to capture more properties between the input.If this layer is not there we are not able to capture the meaning bt some words..768 X 4 = 3072 dimensional.
+- In the first linear layer 1 if we do expanison, we will project the input into 4 times larger dimension to capture more properties or much more information or relationship between the input.If this layer is not there we are not able to capture the meaning bt some words..768 X 4 = 3072 dimensional.
 - Taking one token input modifying each dimensions of the token place by place.
 - Gelu Activation preserves the dimensions..
 - In the linear layer 2, we can do contraction(compress) from higher dimesions into original size from 3072 into 768.
