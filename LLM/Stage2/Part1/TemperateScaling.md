@@ -2,7 +2,7 @@
 
 - Untill now,we saw the generate token is selected corresponding to the largest probability scores among all the token in the vocabulary..
 - leads to the lot of randomness and diversity in generated text
-- Two techqines in the randomess one is temperate scaling and top-k sampling..
+- Two techqines in the randomess one is temperate scaling and top-k sampling..both are used to reduce the overfitting..both are decoding startgies..
 
 ## Temperatre scaling
 
