@@ -12,3 +12,6 @@
  - print the validation aset losses..
 
  - loss function is calculated by target(true_value) and predicted output..
+
+
+- using ollama we can do evaluation of the text
