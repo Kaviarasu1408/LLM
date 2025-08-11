@@ -1,8 +1,8 @@
 ## Data Preparation and Sampling
 
-## How do you prepare a input text for training LLM ?
+## How do you prepare a input text for training LLM ? 
 
-- One of the way is a word based Tokenizer
+- One of the way is a word based Tokenizer.
 - Break the sentence into a individual words for a token or tokenization text.
 - Assign tokens Ids into each token.Each token Ids are associated with the token.
 - Encode the token Id with vector embedding.
@@ -63,6 +63,7 @@
 - Once you sorted you only get unique text, duplicates value will be removed.
 - Assign the unique text a unique number and print it, for this you can use enumerate to print the iteger based on the words.
 - Dictionary contains indvidual token associated with the token Id.
+- vocabulary contains unique tokens with token ids..
 
   ![alt text](../Images/sort.png)
   ![alt text](../Images/unique.png)
