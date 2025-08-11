@@ -13,12 +13,12 @@
 
 ## 3. Pretraining + Fine tuning
 
-- Collect and get the data, this datasets are from books, from Internet,wikipedia and research paper.Mostly this are unlabelled text[raw text].
-- Train the LLM using this unlabelled datasets, this is called pre-training(foundational course).Each words will be considered as token.For training the LLM we need larger gpu.
+- Collect and get the data from different source like datasets or from books, from Internet,wikipedia and research paper.Mostly this are unlabelled text[raw text].
+- Train the LLM using this unlabelled datasets, this is called pre-training(foundational model).Each words will be considered as token.For training the LLM we need larger gpu.
 - Once you pre-trained the LLM, we need to fine tune the LLM for your domain purpose doa a specific task, for finetuning it you need labelled datasets.After the trained pre-training LLM you need to further train on labelled datasets.
 - Two types of finetuning : **Instruction finetuning and fine tuning for classification task**.
 - **Instruction finetuning :** Instruction answers paired on labelled datasets.
-- **Finetuning for classification task :** Labelled datasets consists of text and associated labels.(Spam / Not spam).
+- **Finetuning for classification task :** Labelled datasets consists of text and associated labels.(Spam / Not spam).without any instructions..train the model predict the whether it is spam or no spam.
 
 ## 4. Transformers.
 
@@ -109,3 +109,4 @@ Hello = halo(french), Hi = Hai(French), Cheese = ?.Now based on these example it
 - for eg. Multiple choise question. we didn't trained the model to generate the multiple task question.
 - But they noticed it can perform all other tasks.
 - That is called emergenet behaviour.
+- In training model learns the statistical relationship bt the words and sentence...
