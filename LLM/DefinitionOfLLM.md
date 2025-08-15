@@ -100,7 +100,7 @@ Hello = halo(french), Hi = Hai(French), Cheese = ?.Now based on these example it
 - And finally we can have our output.
 - Because of all this its an unsupervised learning.
 
-![alt text](Images/nextWorkPredictionWorkingModel.png)
+    ![alt text](Images/nextWorkPredictionWorkingModel.png)
 
 ## 14. Emergent Behaviour 
 
@@ -110,3 +110,8 @@ Hello = halo(french), Hi = Hai(French), Cheese = ?.Now based on these example it
 - But they noticed it can perform all other tasks.
 - That is called emergenet behaviour.
 - In training model learns the statistical relationship bt the words and sentence...
+
+## 15. Number of parameters
+
+- since it is trained with lot of parameters, it sees those example and shift around the weights untill it's get better and better for predicting the next word.
+- GPT2 has 117 millions of words.
