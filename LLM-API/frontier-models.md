@@ -2,7 +2,7 @@
 
 - There are different types of models like openAI, Claude, Phi3, gemma and ollama.
 
-## 1. How to setup these API
+## 1. How to setup a model with API
 
 - Create an API key in the respective model example like openai api key or claude api key..
 - Then we need to define the system message and user message
@@ -41,7 +41,7 @@
 
     ![alt text](Images/fn-5.png)
 
-## 4. Airline AI Assistant
+## 4. Airline AI Assistant tools with multi-model
 
 - we need to define the openai api key..
 - we need to construct the system message and we need to call chat() it accepts 2 parameters message, history..
@@ -54,3 +54,11 @@
     ![alt text](Images/fn-8.png)
 
     ![alt text](Images/fn-9.png)
+
+## 5. Convert into audio
+
+- we can use openai.audio.speech.create() to generate audio from the text.
+
+## 6. Converting into Image
+
+- we can use openai.images.generate() to generate image from the text
