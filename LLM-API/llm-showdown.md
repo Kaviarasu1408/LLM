@@ -22,3 +22,17 @@
 - the answer is we need to double the weight..initally if we have 8 billions, now its 16 billions parameters.
 - it's an effective and powerful..
 - if i say i from 8 billions, i want to go to 16 billions..then we need to double the training data
+
+## Benchmarks
+
+- GPQA
+- BBHard
+- Math Lv 5
+- IFEval
+- MuSR
+- MMLU-PRO
+
+## Open LLM Leaderboard 
+
+- we can select the pretrained models and we check the benchmark and filter the model we can use..
+- If i am doing any medical usecases, i need to go to the medical leaderboard and check the leaderboard.
