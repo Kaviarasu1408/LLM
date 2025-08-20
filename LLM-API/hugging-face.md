@@ -70,3 +70,22 @@ example :
 - Then use model.generate() pass the input to predict the next word..
 
     ![alt text](Images/hg-2.png)
+
+
+## Inference Endpoint
+
+- In huggingface we have something called inference endpoint, usually if you run the model u need an infrastrcture like gpu.
+- But with the help of inference endpoint, hugging face create our own server in the cloud and manage our model in the cloud..so we don't need to worry abt the infastructure..
+- it will gives us api endpoint to use in our code..
+
+## Quantization Config
+
+- LLM Stores the weight as 32 bit Floating point(FP32) by default.Quantization shrinks those number into smaller format..it will helpful to reduce the weight to 16 bit or 8 bit or even 4 bits..
+- **Reduce Memory Usage :** suppose you have a model that uses 45GB Ram, with the help of quatinization we will reduce the ram to 15GB and so
+
+    ![alt text](Images/hg-3.png)
+
+- It will also helpful to speedup the inference.
+- It will reduce the cost..becasue now we are using lower compute right..
+- But keeping the most of the accuracy..
+- That's why lot of models in the hugging face have quantization version..
