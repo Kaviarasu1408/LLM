@@ -60,3 +60,15 @@
 - we can use function called conversationalRetrievalChain.from_llm()we can pass the llm, retriever and memory..
 
     ![alt text](Images/rag3.png)
+
+## Basically why do we need RAG
+
+- LLMs are trained on public data, so they can answer questions based on general knowledge available on the internet.
+- But for private data — like your company policies, internal reports, or confidential documents — the LLM doesn’t know it.
+- You don’t need to retrain the LLM to handle your private knowledge.
+- Instead, you can use RAG (Retrieval-Augmented Generation) to incorporate your private knowledge.With RAG:
+- Chunk your documents into smaller pieces.
+- Embed and store them in a vector store (FAISS, Chroma, etc.).
+- A retriever fetches the most relevant chunks in response to a question.
+- The LLM generates answers based on those retrieved chunks.
+- When you connect this with conversation memory, it becomes a Conversational Retrieval Chain, allowing multi-turn, context-aware Q&A over your private documents.
