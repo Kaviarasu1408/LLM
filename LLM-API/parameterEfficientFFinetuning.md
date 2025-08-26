@@ -126,3 +126,14 @@ And then optimize the model by doing little step in the right direction..
 - once you got the gradient and learning rate..
 - we need to update you neural network to shift little bit in a good direction..
 - so that next time it predicts the right next tokemn
+
+## Notes : 
+
+- Epoch will go through the entire dataset once, if we do multiple epochs the model will do better..That's why companies will train with larger epoch.
+- we have training data and validation data.The model will performs good with training data..since we are doing multiple epoch the model will be so much better..models will be too domaint..it also memorize training data..so it perform well in the training data and the validation loss will become higher..it's called overfitting..
+- So for this we use dropout..dropout will turn-off the neurons in every epoch..so that the learning will be shared across the neurons..so that all the neurons will participate in the training..so that it will not rely on one-neuron
+- we do forward pass..for each epoch we send the data in batches..so that we do forward pass..predicte the next word..calculate the loss..for the batch..do the backward pass
+- gradient will tell in which direction we need to go..
+- learning rate how much step we need to take in that direction..
+- optimizer optimize the weights in the new directions..
+- we can take the best epoch with training and validation loss is lower and predicts the next word..
