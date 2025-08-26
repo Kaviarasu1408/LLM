@@ -2,11 +2,11 @@
 
 ## 1. LORA
 
-- Freeze all the layers
-- Select few layers which is called target module
+- In LORA, we will freeze the layers..so while finetuning..the pretrained layers weights will not get updated..
+- Instead of updating all layers, you choose specific layers (usually the attention layers, like q_proj, v_proj) as target modules.
+- Only these target modules will get learnable adapters added.
 - creater a new adaptor matrices with lower dimensions with fewer parameters.
-- Apply these adaptor to the target modules,It will adapt them.
-- Two matrices lora_a and lorab applied in the target module.
+- Apply these adaptor to the target modules,It will adapt them.These adapter we are training it's for specific task..
 
 ## 2. Quantization - the Q in Lora(Quantized low rank adaption)
 
