@@ -8,7 +8,7 @@
 - we need to structure the prompt using System message, user message and the assistant.
 - And pass the message to the frontier models like gpt,claude.This gives us better result
 
-## Finetuning
+## Finetuning the frontier model
 
 - we can finetuning using openai model, we are going to finetune the openai model with 200 training data.
 - Prepare our data for fine-tuning in JSONL (JSON Lines) format and upload to OpenAI.For this convert the prompt message as json objects and write into a file.
