@@ -113,6 +113,7 @@ And then optimize the model by doing little step in the right direction..
 - take the loss, do backward propogation..how much would i have to tweak each weights up or down in order to do a little bit better next timee..
 - you have to take the step in the direction to do better in the next time, you have to shift your weight, a step in the direction to do better next time.
 - the amount you shift your weight in the good direction so that it will do better next time..It's called learning rate..
+- start with the lower learning rate..so that the model can learn..after learning maybe do big jumpp..make it higher..
 
 ## 4. Gradient Accumualtion
 
@@ -126,6 +127,7 @@ And then optimize the model by doing little step in the right direction..
 - once you got the gradient and learning rate..
 - we need to update you neural network to shift little bit in a good direction..
 - so that next time it predicts the right next tokemn
+- we can use AdamW, because it stores the previous gradient..
 
 ## Notes : 
 
